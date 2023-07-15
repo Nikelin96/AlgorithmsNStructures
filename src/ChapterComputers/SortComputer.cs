@@ -1,6 +1,5 @@
 ﻿namespace AlgorithmsNStructures.files_to_check
 {
-
     public class SortComputer
     {
         public int[] SelectionSort(int[] entryArray)
