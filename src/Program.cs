@@ -11,6 +11,8 @@ using AlgorithmsNStructures.ChapterComputers;
 
 
 
-var test = new[] { -10, -3, 0, 5, 9 };
+//var test = new[] { -10, -3, 0, 5, 9 };
+
+var test = new[] { 0, 1, 2, 3, 4, 5 };
 
 new TreesComputer().SortedArrayToBST(test);
