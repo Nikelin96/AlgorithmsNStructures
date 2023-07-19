@@ -1,0 +1,56 @@
+﻿Please provide the solution in C# and structure the comments according to my template:
+
+/*
+#region ExampleRegion
+
+AlgorithmProblem:
+  - Region: "ExampleRegion"
+  - ProblemName: "ExampleProblem"
+    - ProblemStatement: "Given two integers, return their sum."
+    - Constraints: "Both integers are non-negative and less than 10^9."
+    - Examples: 
+      - Example: 
+        - Input: "5, 7"
+        - Output: "12"
+    - Methods: 
+      - SumMethod: 
+        - Approach: "Directly use the '+' operator to add two integers."
+        - Implementation:
+*/
+
+public int SumMethod(int a, int b)
+{
+    return a + b;
+}
+
+/*
+        - TimeComplexity: "O(1), as the operation is a direct sum, the time complexity is constant."
+        - SpaceComplexity: "O(1), we're not using additional space that scales with input size."
+        
+      - SumMethodAlternative: 
+        - Approach: "Alternative way to add two integers."
+        - Implementation:
+*/
+
+public int SumMethodAlternative(int a, int b)
+{
+    // An alternative way to implement the sum of two integers
+    int sum;
+    while (b != 0) 
+    {
+        sum = a & b;
+        a = a ^ b;
+        b = sum << 1;
+    }
+    return a;
+}
+
+/*
+        - TimeComplexity: "O(1), as the operation is a direct sum, the time complexity is constant."
+        - SpaceComplexity: "O(1), we're not using additional space that scales with input size."
+*/
+
+#endregion
+        
+Include the implementation of the method, its approach, time complexity, and space complexity.
+Include all optimal approaches in Methods section
