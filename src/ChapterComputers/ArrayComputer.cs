@@ -101,7 +101,6 @@
         */
         #endregion
 
-
         #region Rotate Array
 
         /*
@@ -195,7 +194,6 @@
 
         #endregion
 
-
         #region Single Number
 
         /*
@@ -238,8 +236,6 @@
         */
 
         #endregion
-
-
 
         #region Intersection Arrays
 
@@ -344,7 +340,6 @@
 
         #endregion
 
-
         #region MoveZeroesRegion
 
         /*
@@ -387,7 +382,6 @@
         */
 
         #endregion
-
 
         #region Two Sum
 
@@ -446,7 +440,6 @@
         */
 
         #endregion
-
 
         #region ValidSudokuRegion
 
@@ -573,7 +566,6 @@
         */
 
         #endregion
-
 
     }
 }
