@@ -266,7 +266,6 @@ namespace AlgorithmsNStructures.ChapterComputers
         #endregion
 
 
-
         #region String to Integer (atoi)
         /*
         AlgorithmProblem:
@@ -389,8 +388,6 @@ namespace AlgorithmsNStructures.ChapterComputers
         */
 
         #endregion
-
-
 
         #region Longest Common Prefix
 
