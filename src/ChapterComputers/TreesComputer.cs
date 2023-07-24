@@ -8,7 +8,6 @@ namespace AlgorithmsNStructures.ChapterComputers
 
         /*
         AlgorithmProblem:
-          - Region: "Tree Traversal"
           - ProblemName: "Maximum Depth of Binary Tree"
             - ProblemStatement: "Given the root of a binary tree, return its maximum depth. The maximum depth of a binary tree is the number of nodes along the longest path from the root node down to the farthest leaf node."
             - Constraints: 
@@ -78,23 +77,22 @@ namespace AlgorithmsNStructures.ChapterComputers
         #region Validate Binary Search Tree
 
         /*
-     AlgorithmProblem:
-       - Region: "Binary Trees"
-       - ProblemName: "Validate Binary Search Tree"
-         - ProblemStatement: "Given the root of a binary tree, determine if it is a valid binary search tree (BST)."
-         - Constraints: "The number of nodes in the tree is in the range [1, 104]. -231 <= Node.val <= 231 - 1."
-         - Examples: 
-           - Example 1: 
-             - Input: "root = [2,1,3]"
-             - Output: "true"
-           - Example 2: 
-             - Input: "root = [5,1,4,null,null,3,6]"
-             - Output: "false"
-         - Methods: 
-           - IsValidBSTRecursive: 
-             - Approach: "This problem is solved by using a recursive depth-first search. A node is valid if it fits within the minimum and maximum values for its position in the tree..."
-             - Implementation:
-     */
+        AlgorithmProblem:
+          - ProblemName: "Validate Binary Search Tree"
+            - ProblemStatement: "Given the root of a binary tree, determine if it is a valid binary search tree (BST)."
+            - Constraints: "The number of nodes in the tree is in the range [1, 104]. -231 <= Node.val <= 231 - 1."
+            - Examples: 
+              - Example 1: 
+                - Input: "root = [2,1,3]"
+                - Output: "true"
+              - Example 2: 
+                - Input: "root = [5,1,4,null,null,3,6]"
+                - Output: "false"
+            - Methods: 
+              - IsValidBSTRecursive: 
+                - Approach: "This problem is solved by using a recursive depth-first search. A node is valid if it fits within the minimum and maximum values for its position in the tree..."
+                - Implementation:
+        */
 
         public bool IsValidBSTRecursive(TreeNode root)
         {
@@ -150,12 +148,10 @@ namespace AlgorithmsNStructures.ChapterComputers
 
         #endregion
 
-
         #region Symmetric Tree
 
         /*
         AlgorithmProblem:
-          - Region: "Binary Trees"
           - ProblemName: "Symmetric Tree"
             - ProblemStatement: "Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center)."
             - Constraints: "The number of nodes in the tree is in the range [1, 1000]. -100 <= Node.val <= 100."
@@ -226,7 +222,6 @@ namespace AlgorithmsNStructures.ChapterComputers
 
         /*
         AlgorithmProblem:
-          - Region: "Binary Trees"
           - ProblemName: "Binary Tree Level Order Traversal"
             - ProblemStatement: "Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level)."
             - Constraints: "The number of nodes in the tree is in the range [0, 2000]. -1000 <= Node.val <= 1000."
@@ -280,7 +275,6 @@ namespace AlgorithmsNStructures.ChapterComputers
 
         /*
         AlgorithmProblem:
-          - Region: "Convert Sorted Array to Binary Search Tree"
           - ProblemName: "Convert Sorted Array to Binary Search Tree"
             - ProblemStatement: "Given an integer array nums where the elements are sorted in ascending order, convert it to a height-balanced binary search tree."
             - Constraints: "1 <= nums.length <= 10^4, -10^4 <= nums[i] <= 10^4, nums is sorted in a strictly increasing order."

@@ -60,7 +60,6 @@
 
         /*
         AlgorithmProblem:
-          - Region: "Merge Sorted Array"
           - ProblemName: "Merge Sorted Array"
             - ProblemStatement: "You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively. Merge nums1 and nums2 into a single array sorted in non-decreasing order."
             - Constraints: "nums1.length == m + n, nums2.length == n, 0 <= m, n <= 200, 1 <= m + n <= 200, -10^9 <= nums1[i], nums2[j] <= 10^9."
@@ -121,7 +120,6 @@
 
         /*
         AlgorithmProblem:
-          - Region: "First Bad Version"
           - ProblemName: "First Bad Version"
             - ProblemStatement: "Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad. You are given an API bool isBadVersion(version) which returns whether version is bad. Implement a function to find the first bad version."
             - Constraints: "1 <= bad <= n <= 2^31 - 1."

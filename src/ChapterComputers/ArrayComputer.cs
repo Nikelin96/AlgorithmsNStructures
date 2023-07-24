@@ -3,11 +3,10 @@
     internal class ArrayComputer
     {
 
-        #region Remove Duplicates Region
+        #region Remove Duplicates
 
         /*
         AlgorithmProblem:
-          - Region: "RemoveDuplicatesRegion"
           - ProblemName: "Remove Duplicates from Sorted Array"
             - ProblemStatement: "Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place 
                                  such that each unique element appears only once. The relative order of the elements should 
@@ -57,7 +56,6 @@
 
         /*
         AlgorithmProblem:
-          - Region: "BestTimeBuySellStockRegion"
           - ProblemName: "Best Time to Buy and Sell Stock II"
             - ProblemStatement: "Given an integer array prices where prices[i] is the price of a given stock on the ith day.
                                  On each day, you may decide to buy and/or sell the stock. You can only hold at most one share 
@@ -105,7 +103,6 @@
 
         /*
         AlgorithmProblem:
-          - Region: "RotateArrayRegion"
           - ProblemName: "Rotate Array"
             - ProblemStatement: "Given an integer array nums, rotate the array to the right by k steps, where k is non-negative."
             - Constraints: "1 <= nums.length <= 105
@@ -155,7 +152,6 @@
 
         /*
         AlgorithmProblem:
-          - Region: "ContainsDuplicateRegion"
           - ProblemName: "Contains Duplicate"
             - ProblemStatement: "Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct."
             - Constraints: "1 <= nums.length <= 105
@@ -198,7 +194,6 @@
 
         /*
         AlgorithmProblem:
-          - Region: "SingleNumberRegion"
           - ProblemName: "Single Number"
             - ProblemStatement: "Given a non-empty array of integers nums, every element appears twice except for one. Find that single one."
             - Constraints: "1 <= nums.length <= 3 * 104
@@ -241,7 +236,6 @@
 
         /*
         AlgorithmProblem:
-          - Region: "IntersectionArraysRegion"
           - ProblemName: "Intersection of Two Arrays II"
             - ProblemStatement: "Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must appear as many times as it shows in both arrays and you may return the result in any order."
             - Constraints: "1 <= nums1.length, nums2.length <= 1000
@@ -294,7 +288,6 @@
 
         /*
         AlgorithmProblem:
-          - Region: "PlusOneRegion"
           - ProblemName: "Plus One"
             - ProblemStatement: "You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's. Increment the large integer by one and return the resulting array of digits."
             - Constraints: "1 <= digits.length <= 100
@@ -340,11 +333,10 @@
 
         #endregion
 
-        #region MoveZeroesRegion
+        #region Move Zeroes
 
         /*
         AlgorithmProblem:
-          - Region: "MoveZeroesRegion"
           - ProblemName: "Move Zeroes"
             - ProblemStatement: "Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements. You must do this in-place without making a copy of the array."
             - Constraints: "1 <= nums.length <= 10^4
@@ -441,11 +433,10 @@
 
         #endregion
 
-        #region ValidSudokuRegion
+        #region Valid Sudoku Region
 
         /*
         AlgorithmProblem:
-          - Region: "ValidSudokuRegion"
           - ProblemName: "Valid Sudoku"
             - ProblemStatement: "Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules: Each row must contain the digits 1-9 without repetition. Each column must contain the digits 1-9 without repetition. Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without repetition."
             - Constraints: "board.length == 9

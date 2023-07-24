@@ -8,7 +8,6 @@ namespace AlgorithmsNStructures.ChapterComputers
 
         /*
         AlgorithmProblem:
-          - Region: "String Manipulation"
           - ProblemName: "Reverse String"
             - ProblemStatement: "Write a function that reverses a string. The input string is given as an array of characters s. You must do this by modifying the input array in-place with O(1) extra memory."
             - Constraints: 
@@ -56,7 +55,6 @@ namespace AlgorithmsNStructures.ChapterComputers
 
         /*
         AlgorithmProblem:
-          - Region: "Integer Manipulation"
           - ProblemName: "Reverse Integer"
             - ProblemStatement: "Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0."
             - Constraints: 
@@ -106,7 +104,6 @@ namespace AlgorithmsNStructures.ChapterComputers
 
         /*
         AlgorithmProblem:
-          - Region: "String Manipulation"
           - ProblemName: "First Unique Character in a String"
             - ProblemStatement: "Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1."
             - Constraints: 
@@ -161,7 +158,6 @@ namespace AlgorithmsNStructures.ChapterComputers
 
         /*
         AlgorithmProblem:
-          - Region: "String Manipulation"
           - ProblemName: "Valid Anagram"
             - ProblemStatement: "Given two strings s and t, return true if t is an anagram of s, and false otherwise."
             - Constraints: 
@@ -209,7 +205,6 @@ namespace AlgorithmsNStructures.ChapterComputers
         #region Valid Palindrome
         /*
         AlgorithmProblem:
-          - Region: "Strings"
           - ProblemName: 
             - ProblemStatement: "A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Given a string s, return true if it is a palindrome, or false otherwise."
             - Constraints: "1 <= s.length <= 2 * 10^5. s consists only of printable ASCII characters."
@@ -269,7 +264,6 @@ namespace AlgorithmsNStructures.ChapterComputers
         #region String to Integer (atoi)
         /*
         AlgorithmProblem:
-          - Region: "String Processing"
           - ProblemName:
             - String to Integer (atoi)
             - ProblemStatement: "Implement a method that converts a string to a 32-bit signed integer (similar to C/C++'s atoi function). The string can include leading or trailing whitespace, a leading '-' or '+', and any characters after the integer part should be ignored."
@@ -335,7 +329,6 @@ namespace AlgorithmsNStructures.ChapterComputers
 
         /*
         AlgorithmProblem:
-          - Region: "String Manipulation"
           - ProblemName: "Implement strStr()"
             - ProblemStatement: "Given two strings haystack and needle, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack."
             - Constraints: 
@@ -393,7 +386,6 @@ namespace AlgorithmsNStructures.ChapterComputers
 
         /*
         AlgorithmProblem:
-          - Region: "String Manipulation"
           - ProblemName: "Longest Common Prefix"
             - ProblemStatement: "Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string."
             - Constraints: 
