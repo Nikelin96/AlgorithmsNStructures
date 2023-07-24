@@ -1,5 +1,22 @@
 ﻿namespace AlgorithmsNStructures.files_to_check
 {
+    // Simulate the version control system
+    public class VersionControl
+    {
+        private int firstBad;
+
+        public VersionControl(int firstBadVersion)
+        {
+            firstBad = firstBadVersion;
+        }
+
+        public bool IsBadVersion(int version)
+        {
+            return version >= firstBad;
+        }
+    }
+
+
     public class SortComputer
     {
         public int[] SelectionSort(int[] entryArray)
@@ -99,58 +116,57 @@
         */
 
         #endregion
-    }
 
+        #region First Bad Version
 
-    #region First Bad Version
+        /*
+        AlgorithmProblem:
+          - Region: "First Bad Version"
+          - ProblemName: "First Bad Version"
+            - ProblemStatement: "Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad. You are given an API bool isBadVersion(version) which returns whether version is bad. Implement a function to find the first bad version."
+            - Constraints: "1 <= bad <= n <= 2^31 - 1."
+            - Examples: 
+              - Example: 
+                - Input: "n = 5, bad = 4"
+                - Output: "4"
+              - Example: 
+                - Input: "n = 1, bad = 1"
+                - Output: "1"
+            - Methods: 
+              - FirstBadVersion: 
+                - Approach: "Use a binary search approach to minimize the number of calls to the API. Start with the range of all versions and repeatedly divide this range in half until finding the first bad version."
+                - Implementation:
+        */
 
-    /*
-    AlgorithmProblem:
-      - Region: "First Bad Version"
-      - ProblemName: "First Bad Version"
-        - ProblemStatement: "Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad. You are given an API bool isBadVersion(version) which returns whether version is bad. Implement a function to find the first bad version."
-        - Constraints: "1 <= bad <= n <= 2^31 - 1."
-        - Examples: 
-          - Example: 
-            - Input: "n = 5, bad = 4"
-            - Output: "4"
-          - Example: 
-            - Input: "n = 1, bad = 1"
-            - Output: "1"
-        - Methods: 
-          - FirstBadVersion: 
-            - Approach: "Use a binary search approach to minimize the number of calls to the API. Start with the range of all versions and repeatedly divide this range in half until finding the first bad version."
-            - Implementation:
-    */
+        /* The isBadVersion API is defined in the parent class VersionControl.
+              bool IsBadVersion(int version); */
 
-    /* The isBadVersion API is defined in the parent class VersionControl.
-          bool IsBadVersion(int version); */
-
-    public int FirstBadVersion(int n)
-    {
-        int start = 1;
-        int end = n;
-        while (start < end)
+        public int FirstBadVersion(int n)
         {
-            int mid = start + (end - start) / 2;
-            if (IsBadVersion(mid))
+            var random = new Random();
+            var versionControl = new VersionControl(random.Next(n));
+            int start = 1;
+            int end = n;
+            while (start < end)
             {
-                end = mid;
+                int mid = start + (end - start) / 2;
+                if (versionControl.IsBadVersion(mid))
+                {
+                    end = mid;
+                }
+                else
+                {
+                    start = mid + 1;
+                }
             }
-            else
-            {
-                start = mid + 1;
-            }
+            return start;
         }
-        return start;
+
+        /*
+                - TimeComplexity: "O(log n), where n is the number of versions. The binary search algorithm halves the search space with each step, so it has a logarithmic time complexity."
+                - SpaceComplexity: "O(1), as we only use a constant amount of space to store our variables."
+        */
+
+        #endregion
     }
-
-    /*
-            - TimeComplexity: "O(log n), where n is the number of versions. The binary search algorithm halves the search space with each step, so it has a logarithmic time complexity."
-            - SpaceComplexity: "O(1), as we only use a constant amount of space to store our variables."
-    */
-
-    #endregion
-
-
 }
