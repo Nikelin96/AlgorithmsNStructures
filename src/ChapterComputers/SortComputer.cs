@@ -76,7 +76,6 @@
             - Methods: 
               - Merge: 
                 - Approach: "Start merging from the end. Initialize two pointers in nums1 and nums2 respectively, and compare their values to decide which one gets placed in the current last open position of nums1. Continue until all the elements of nums1 and nums2 have been checked."
-                - Implementation:
         */
 
         public void Merge(int[] nums1, int m, int[] nums2, int n)
@@ -133,7 +132,6 @@
             - Methods: 
               - FirstBadVersion: 
                 - Approach: "Use a binary search approach to minimize the number of calls to the API. Start with the range of all versions and repeatedly divide this range in half until finding the first bad version."
-                - Implementation:
         */
 
         /* The isBadVersion API is defined in the parent class VersionControl.

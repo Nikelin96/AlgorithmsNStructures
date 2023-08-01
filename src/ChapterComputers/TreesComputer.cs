@@ -20,7 +20,6 @@ namespace AlgorithmsNStructures.ChapterComputers
             - Methods: 
               - MaxDepthRecursive: 
                 - Approach: "This method uses recursion to find the maximum depth. If the current node is null, it returns 0. Otherwise, it calculates the maximum depth of the left and right subtrees and returns the larger one plus 1."
-                - Implementation:
         */
 
         public int MaxDepthRecursive(TreeNode root)
@@ -39,7 +38,6 @@ namespace AlgorithmsNStructures.ChapterComputers
                 - SpaceComplexity: "O(h), where h is the height of the tree, corresponding to the maximum number of recursive calls on the stack."
               - MaxDepthIterative:
                 - Approach: "This method uses depth-first traversal with a stack to find the maximum depth iteratively. For each node, it pushes the node's children into the stack and updates the maximum depth so far."
-                - Implementation:
         */
 
         public int MaxDepthIterative(TreeNode root)
@@ -91,7 +89,6 @@ namespace AlgorithmsNStructures.ChapterComputers
             - Methods: 
               - IsValidBSTRecursive: 
                 - Approach: "This problem is solved by using a recursive depth-first search. A node is valid if it fits within the minimum and maximum values for its position in the tree..."
-                - Implementation:
         */
 
         public bool IsValidBSTRecursive(TreeNode root)
@@ -111,7 +108,6 @@ namespace AlgorithmsNStructures.ChapterComputers
                 - SpaceComplexity: "O(h), where h is the height of the tree, because of the maximum amount of space needed for the recursive call stack."
               - IsValidBSTIterative: 
                 - Approach: "The iterative approach uses an in-order traversal and checks whether the values of the nodes are in ascending order..."
-                - Implementation:
         */
 
         public bool IsValidBSTIterative(TreeNode root)
@@ -165,7 +161,6 @@ namespace AlgorithmsNStructures.ChapterComputers
             - Methods: 
               - IsSymmetricRecursive: 
                 - Approach: "This problem can be solved recursively by checking if the left subtree is a mirror of the right subtree..."
-                - Implementation:
         */
 
         public bool IsSymmetricRecursive(TreeNode root)
@@ -186,7 +181,6 @@ namespace AlgorithmsNStructures.ChapterComputers
                 - SpaceComplexity: "O(h), where h is the height of the tree, because of the maximum amount of space needed for the recursive call stack."
               - IsSymmetricIterative: 
                 - Approach: "This problem can also be solved iteratively using a queue..."
-                - Implementation:
         */
 
         public bool IsSymmetricIterative(TreeNode root)
@@ -238,7 +232,6 @@ namespace AlgorithmsNStructures.ChapterComputers
             - Methods: 
               - LevelOrder: 
                 - Approach: "This problem can be solved using the Breadth-First Search (BFS) algorithm. We process the nodes level by level, from left to right. For each level, we dequeue all nodes at that level, add their values to a list, and enqueue their children for the next level. The loop continues until there are no more nodes to process, i.e., the queue is empty. At that point, the function returns the result, which is a list of levels, where each level is represented as a list of node values."
-                - Implementation:
         */
 
         public IList<IList<int>> LevelOrder(TreeNode root)
@@ -288,7 +281,6 @@ namespace AlgorithmsNStructures.ChapterComputers
             - Methods: 
               - SortedArrayToBST: 
                 - Approach: "The middle element of the array becomes the root of the binary search tree (BST) because it ensures that the tree remains height balanced. We use a helper function, ConvertArrayToBST, to recursively construct the left and right subtrees."
-                - Implementation:
         */
         public TreeNode? SortedArrayToBST(int[] nums)
         {

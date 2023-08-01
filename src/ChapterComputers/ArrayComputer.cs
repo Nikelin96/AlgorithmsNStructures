@@ -25,7 +25,6 @@
               - RemoveDuplicatesMethod: 
                 - Approach: "Two-pointer technique where one pointer (i) holds the index of the next unique element and 
                              the other pointer (j) scans through the array comparing elements."
-                - Implementation:
         */
 
         public int RemoveDuplicatesMethod(int[] nums)
@@ -77,7 +76,6 @@
               - MaxProfitMethod: 
                 - Approach: "One pass through the prices array. If the current price is greater than the previous price, 
                              add the difference to the maxProfit. This effectively accumulates all increases in price."
-                - Implementation:
         */
 
         public int MaxProfitMethod(int[] prices)
@@ -119,7 +117,6 @@
               - RotateMethod: 
                 - Approach: "First, reduce the number of rotations. We just need to make k % nums.length rotations.
                              Then, reverse the whole array, reverse the first k numbers, and reverse the rest."
-                - Implementation:
         */
 
         public void RotateMethod(int[] nums, int k)
@@ -169,7 +166,6 @@
             - Methods: 
               - ContainsDuplicateMethod: 
                 - Approach: "Using HashSet to keep track of seen numbers. If a number is already in the HashSet, return true."
-                - Implementation:
         */
 
         public bool ContainsDuplicateMethod(int[] nums)
@@ -212,7 +208,6 @@
             - Methods: 
               - SingleNumberMethod: 
                 - Approach: "Use XOR operation to find the single number. The property of XOR is that it returns 0 if we take XOR of two same numbers. Finally, we get the number that appears once."
-                - Implementation:
         */
 
         public int SingleNumberMethod(int[] nums)
@@ -250,7 +245,6 @@
             - Methods: 
               - IntersectionMethod: 
                 - Approach: "Use a Dictionary to record the count of each number in the first array. Then iterate through the second array and decrease the count in the Dictionary for each number encountered. Add the number to the result if the count in the Dictionary is more than zero."
-                - Implementation:
         */
 
         public int[] IntersectionMethod(int[] nums1, int[] nums2)
@@ -306,7 +300,6 @@
             - Methods: 
               - PlusOneMethod: 
                 - Approach: "Starting from the last digit, increment it by 1. If it becomes 10, set it to 0 and carry the 1 over to the next digit. If there is still a carry after going through all digits, prepend a 1 to the array."
-                - Implementation:
         */
 
         public int[] PlusOneMethod(int[] digits)
@@ -351,7 +344,6 @@
             - Methods: 
               - MoveZeroesMethod: 
                 - Approach: "Keep a pointer for the last non-zero element found so far. When encountering a non-zero element, swap it with the first zero element (if one is found)."
-                - Implementation:
         */
 
         public void MoveZeroesMethod(int[] nums)
@@ -399,7 +391,6 @@
             - Methods: 
               - TwoSumMethod: 
                 - Approach: "Use a hash map to store the numbers and their indices. While iterating over the array, check if the complement of the current number (target - current number) exists in the hash map. If it exists, return the indices. Otherwise, add the current number and its index to the hash map."
-                - Implementation:
         */
 
         public int[] TwoSumMethod(int[] nums, int target)
@@ -452,7 +443,6 @@
             - Methods: 
               - IsValidSudoku: 
                 - Approach: "Use three arrays to store the presence of a digit in a row, a column, and a box. Iterate over each cell of the board, if a cell is not empty, check whether the current digit has appeared before in its corresponding row, column, or box. If it has, return false, otherwise, mark it as appeared."
-                - Implementation:
         */
 
         public bool IsValidSudoku(char[][] board)
@@ -521,7 +511,6 @@
             - Methods: 
               - Rotate: 
                 - Approach: "First transpose the matrix (swap rows and columns), and then for each row, reverse the elements to get the rotated image."
-                - Implementation:
         */
 
         public void Rotate(int[][] matrix)

@@ -24,7 +24,6 @@ namespace AlgorithmsNStructures.ChapterComputers
               - ReverseString_InPlace: 
                 - Approach: 
                   "Two pointers technique is used where one pointer starts from the beginning while the other pointer starts from the end. Swap the elements at both pointers. Move the start pointer one step towards the end and the end pointer one step towards the start. Continue this process until the start pointer becomes greater than or equal to the end pointer."
-                - Implementation:
         */
 
         public void ReverseString_InPlace(char[] s)
@@ -73,7 +72,6 @@ namespace AlgorithmsNStructures.ChapterComputers
               - ReverseInteger: 
                 - Approach: 
                   "Iteratively pop the last digit from the original number and push it to the reverse number. Also, check for overflow/underflow during the process."
-                - Implementation:
         */
 
         public int ReverseInteger(int x)
@@ -124,7 +122,6 @@ namespace AlgorithmsNStructures.ChapterComputers
                 - Approach: 
                   "Traverse the string once to create a frequency count of each character. 
                    Then traverse the string again to find the first character with a count of 1."
-                - Implementation:
         */
 
         public int FirstUniqChar(string s)
@@ -175,7 +172,6 @@ namespace AlgorithmsNStructures.ChapterComputers
                 - Approach: 
                   "Sort both the strings and then compare if both the sorted strings are equal. 
                    If they are equal, then they are anagrams of each other."
-                - Implementation:
         */
 
         public bool IsAnagram(string s, string t)
@@ -221,7 +217,6 @@ namespace AlgorithmsNStructures.ChapterComputers
             - Methods: 
               - MethodName_PostfixIfApplicable: IsPalindrome
                 - Approach: "The function initializes two pointers, one at the start of the string and the other at the end. It then enters a loop that continues until the two pointers meet. In each iteration, the function advances the start pointer if the current character is not alphanumeric and retreats the end pointer if the current character is not alphanumeric. If both characters are alphanumeric, it checks whether they are the same. If they are not the same, it returns false. If the loop completes without finding any unequal characters, it returns true."
-                - Implementation: 
         */
 
         public bool IsPalindrome(string s)
@@ -281,7 +276,6 @@ namespace AlgorithmsNStructures.ChapterComputers
             - Methods: 
               - MethodName_MyAtoi: 
                 - Approach: "The function skips any leading whitespace, checks for a leading '-' or '+', reads in the digits until a non-digit character is encountered or the end of the string, and converts the string of digits to an integer. The sign of the result is determined by the leading '-' or '+' (the result is positive if neither is present). If the integer is outside the range of a 32-bit signed integer, it is clamped to the range."
-                - Implementation: 
         */
 
         public int MyAtoi(string str)
@@ -344,7 +338,6 @@ namespace AlgorithmsNStructures.ChapterComputers
             - Methods: 
               - StrStrLinearScan: 
                 - Approach: "Perform a linear scan through the haystack string. At each position, attempt to match the needle string."
-                - Implementation:
         */
 
         public int StrStrLinearScan(string haystack, string needle)
@@ -367,7 +360,6 @@ namespace AlgorithmsNStructures.ChapterComputers
                 - SpaceComplexity: "O(1), as we are not using any additional space that scales with the input size."
               - StrStrBuiltInFunctions:
                 - Approach: "Using the built-in 'IndexOf' function of C# to find the first occurrence of needle in haystack."
-                - Implementation:
         */
 
         public int StrStrBuiltInFunctions(string haystack, string needle)
@@ -402,7 +394,6 @@ namespace AlgorithmsNStructures.ChapterComputers
             - Methods: 
               - LongestCommonPrefixVerticalScan: 
                 - Approach: "This method checks each character in the same position for all the strings until it finds a mismatch. It is called vertical scanning because it checks the same character position vertically across all strings."
-                - Implementation:
         */
 
         public string LongestCommonPrefixVerticalScan(string[] strs)
@@ -429,7 +420,6 @@ namespace AlgorithmsNStructures.ChapterComputers
                 - SpaceComplexity: "O(1), constant space is used."
               - LongestCommonPrefixDivideAndConquer:
                 - Approach: "The problem is broken down into subproblems and the result of the subproblems are used to compute the result of the original problem. The divide and conquer approach splits the array of strings into two equal halves and finds the common prefix for each half first. Then it combines the results of the two halves."
-                - Implementation:
         */
 
         public string LongestCommonPrefixDivideAndConquer(string[] strs)
@@ -468,7 +458,6 @@ namespace AlgorithmsNStructures.ChapterComputers
                 - SpaceComplexity: "O(m*log(n)), where m is the length of the longest string, and n is the number of strings in the array."
               - LongestCommonPrefixBinarySearch:
                 - Approach: "The approach assumes that there is a common prefix among the strings. A binary search is used to find this common prefix."
-                - Implementation:
         */
 
         public string LongestCommonPrefixBinarySearch(string[] strs)
