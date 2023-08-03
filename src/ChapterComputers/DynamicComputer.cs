@@ -47,5 +47,48 @@
 
         #endregion
 
+
+        #region  Best Time to Buy and Sell Stock
+
+        /*
+        AlgorithmProblem:
+          - Region: "StockProfitRegion"
+          - ProblemName: "MaxProfit"
+            - ProblemStatement: "Given an array of prices, where prices[i] is the price of a given stock on the ith day, return the maximum profit you can achieve from this transaction by choosing a single day to buy one stock and choosing a different day in the future to sell that stock."
+            - Constraints: "1 <= prices.length <= 105, 0 <= prices[i] <= 104."
+            - Examples: 
+              - Example: 
+                - Input: "[7,1,5,3,6,4]"
+                - Output: "5"
+              - Example: 
+                - Input: "[7,6,4,3,1]"
+                - Output: "0"
+            - Methods: 
+              - MaxProfit: 
+                - Approach: "Maintain two variables - minprice and maxprofit. Traverse the array, updating minprice as the minimum value of minprice and prices[i], and update maxprofit as the maximum of maxprofit and prices[i]-minprice."
+        */
+
+        public int MaxProfit(int[] prices)
+        {
+            int minPrice = int.MaxValue;
+            int maxProfit = 0;
+            for (int i = 0; i < prices.Length; i++)
+            {
+                if (prices[i] < minPrice)
+                    minPrice = prices[i];
+                else if (prices[i] - minPrice > maxProfit)
+                    maxProfit = prices[i] - minPrice;
+            }
+            return maxProfit;
+        }
+
+        /*
+                - TimeComplexity: "O(n), where n is the length of the array. This is because we have a single loop that traverses through the array once."
+                - SpaceComplexity: "O(1), we're not using additional space that scales with input size. We're only using a few variables for storing intermediate results."
+        */
+
+        #endregion
+
+
     }
 }

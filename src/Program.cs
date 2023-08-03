@@ -13,6 +13,7 @@ using AlgorithmsNStructures.ChapterComputers;
 
 //var test = new[] { -10, -3, 0, 5, 9 };
 
-var test = new[] { 0, 1, 2, 3, 4, 5 };
+//var test = new[] {7,1,5,3,6,4 };
+var test = new [] {3,3,5,0,0,3,1,4};
 
-new TreesComputer().SortedArrayToBST(test);
+new DynamicComputer().MaxProfit(test);
