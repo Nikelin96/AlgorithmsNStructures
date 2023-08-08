@@ -14,6 +14,6 @@ using AlgorithmsNStructures.ChapterComputers;
 //var test = new[] { -10, -3, 0, 5, 9 };
 
 //var test = new[] {7,1,5,3,6,4 };
-var test = new [] {3,3,5,0,0,3,1,4};
+var test = new [] { 2,2,3};
 
-new DynamicComputer().MaxProfit(test);
+new DynamicComputer().RemoveElement(test, 3);

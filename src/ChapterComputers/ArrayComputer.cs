@@ -3,7 +3,7 @@
     internal class ArrayComputer
     {
 
-        #region Remove Duplicates
+        #region Remove Duplicates from Sorted Array I
 
         /*
         AlgorithmProblem:
@@ -51,51 +51,177 @@
         */
         #endregion
 
-        #region Best Time Buy Sell Stock 
+        #region Remove Duplicates from Sorted Array II
 
         /*
         AlgorithmProblem:
-          - ProblemName: "Best Time to Buy and Sell Stock II"
-            - ProblemStatement: "Given an integer array prices where prices[i] is the price of a given stock on the ith day.
-                                 On each day, you may decide to buy and/or sell the stock. You can only hold at most one share 
-                                 of the stock at any time. However, you can buy it then immediately sell it on the same day. 
-                                 Find and return the maximum profit you can achieve."
-            - Constraints: "1 <= prices.length <= 3 * 104
-                            0 <= prices[i] <= 104"
+          - ProblemName: "Remove Duplicates from Sorted Array II"
+            - ProblemStatement: "Given an integer array nums sorted in non-decreasing order, remove some duplicates in-place such that each unique element appears at most twice. The relative order of the elements should be kept the same."
+            - Constraints: "1 <= nums.length <= 3 * 10^4, -10^4 <= nums[i] <= 10^4, nums is sorted in non-decreasing order."
             - Examples: 
               - Example: 
-                - Input: "[7,1,5,3,6,4]"
-                - Output: "7"
-              - Example: 
-                - Input: "[1,2,3,4,5]"
-                - Output: "4"
-              - Example: 
-                - Input: "[7,6,4,3,1]"
-                - Output: "0"
+                - Input: "nums = [0,0,1,1,1,1,2,3,3]"
+                - Output: "7, nums = [0,0,1,1,2,3,3,_,_]"
             - Methods: 
-              - MaxProfitMethod: 
-                - Approach: "One pass through the prices array. If the current price is greater than the previous price, 
-                             add the difference to the maxProfit. This effectively accumulates all increases in price."
+              - RemoveDuplicates: 
+                - Approach: "Use two pointers. One to iterate through the array and the other to keep track of the unique elements. Replace the duplicates with unique elements allowing at most two occurrences."
         */
 
-        public int MaxProfitMethod(int[] prices)
+        public int RemoveDuplicates2nd(int[] nums)
         {
-            int maxProfit = 0;
-            for (int i = 1; i < prices.Length; i++)
+            if (nums.Length <= 2) return nums.Length;
+
+            int uniquePointer = 2;
+            for (int i = 2; i < nums.Length; i++)
             {
-                if (prices[i] > prices[i - 1])
+                if (nums[i] != nums[uniquePointer - 2])
                 {
-                    maxProfit += prices[i] - prices[i - 1];
+                    nums[uniquePointer] = nums[i];
+                    uniquePointer++;
                 }
             }
-            return maxProfit;
+            return uniquePointer;
         }
 
         /*
-                - TimeComplexity: "O(n), where n is the length of prices. We traverse the prices array once."
-                - SpaceComplexity: "O(1), No additional space is allocated."
+                - TimeComplexity: "O(n), as the operation iterates through the array only once."
+                - SpaceComplexity: "O(1), we're not using additional space that scales with input size."
         */
+
         #endregion
+
+
+        #region Merge Sorted Array
+
+        /*
+        AlgorithmProblem:
+          - ProblemName: "Merge Sorted Array"
+            - ProblemStatement: "Given two integer arrays nums1 and nums2, sorted in non-decreasing order, merge nums1 and nums2 into a single array sorted in non-decreasing order."
+            - Constraints: "nums1.length == m + n, nums2.length == n, 0 <= m, n <= 200, 1 <= m + n <= 200, -10^9 <= nums1[i], nums2[j] <= 10^9."
+            - Examples: 
+              - Example: 
+                - Input: "nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3"
+                - Output: "[1,2,2,3,5,6]"
+            - Methods: 
+              - MergeArrays: 
+                - Approach: "Use three pointers approach. Start from the end of both arrays and fill nums1 from the end."
+        */
+
+        public void MergeArrays(int[] nums1, int m, int[] nums2, int n)
+        {
+            int p1 = m - 1, p2 = n - 1, p = m + n - 1;
+
+            while (p1 >= 0 && p2 >= 0)
+            {
+                if (nums1[p1] > nums2[p2])
+                {
+                    nums1[p] = nums1[p1];
+                    p1--;
+                }
+                else
+                {
+                    nums1[p] = nums2[p2];
+                    p2--;
+                }
+                p--;
+            }
+
+            // If there are elements remaining in nums2, copy them to nums1
+            while (p2 >= 0)
+            {
+                nums1[p] = nums2[p2];
+                p--;
+            }
+        }
+
+        /*
+                - TimeComplexity: "O(m + n), as we iterate through both arrays only once."
+                - SpaceComplexity: "O(1), we're not using additional space that scales with input size."
+        */
+
+        #endregion
+
+        #region Remove Duplicates
+
+        /*
+        AlgorithmProblem:
+          - ProblemName: "Remove Duplicates from Sorted Array"
+            - ProblemStatement: "Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums."
+            - Constraints: "1 <= nums.length <= 3 * 10^4, -100 <= nums[i] <= 100, nums is sorted in non-decreasing order."
+            - Examples: 
+              - Example: 
+                - Input: "nums = [0,0,1,1,1,2,2,3,3,4]"
+                - Output: "5, nums = [0,1,2,3,4,_,_,_,_,_]"
+            - Methods: 
+              - RemoveDuplicates: 
+                - Approach: "Use two pointers, one to iterate through the array and the other to keep track of the unique elements. Replace the duplicates with unique elements."
+        */
+
+        public int RemoveDuplicates(int[] nums)
+        {
+            if (nums.Length == 0) return 0;
+
+            int uniquePointer = 0;
+            for (int i = 1; i < nums.Length; i++)
+            {
+                if (nums[i] != nums[uniquePointer])
+                {
+                    uniquePointer++;
+                    nums[uniquePointer] = nums[i];
+                }
+            }
+            return uniquePointer + 1;
+        }
+
+        /*
+                - TimeComplexity: "O(n), as the operation iterates through the array only once."
+                - SpaceComplexity: "O(1), we're not using additional space that scales with input size."
+        */
+
+        #endregion
+
+
+
+        #region Remove Element 
+
+        /*
+        AlgorithmProblem:
+          - ProblemName: "Remove Element"
+            - ProblemStatement: "Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val."
+            - Constraints: "0 <= nums.length <= 100, 0 <= nums[i] <= 50, 0 <= val <= 100."
+            - Examples: 
+              - Example: 
+                - Input: "nums = [3,2,2,3], val = 3"
+                - Output: "2, nums = [2,2,_,_]"
+              - Example: 
+                - Input: "nums = [0,1,2,2,3,0,4,2], val = 2"
+                - Output: "5, nums = [0,1,4,0,3,_,_,_]"
+            - Methods: 
+              - RemoveElement: 
+                - Approach: "Use two-pointer technique where one pointer (slow) represents the number of elements not equal to val, and another pointer (fast) to scan through the array. If the fast pointer encounters an element not equal to val, it is placed at the position of the slow pointer, and both pointers advance. If it is equal to val, only the fast pointer advances."
+        */
+
+        public int RemoveElement(int[] nums, int val)
+        {
+            int slowPointer = 0;
+            for (int fastPointer = 0; fastPointer < nums.Length; fastPointer++)
+            {
+                if (nums[fastPointer] != val)
+                {
+                    nums[slowPointer] = nums[fastPointer];
+                    slowPointer++;
+                }
+            }
+            return slowPointer;
+        }
+
+        /*
+                - TimeComplexity: "O(n), where n is the length of the array. This is because we have a single loop that traverses through the array once."
+                - SpaceComplexity: "O(1), we're not using additional space that scales with input size. The operation is done in-place."
+        */
+
+        #endregion
+
 
         #region Rotate Array
 
