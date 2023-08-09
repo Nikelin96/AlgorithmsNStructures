@@ -673,5 +673,46 @@
 
         #endregion
 
+        #region Majority Element
+
+        /*
+        AlgorithmProblem:
+          - ProblemName: "Majority Element"
+            - ProblemStatement: "Given an array nums of size n, return the majority element. The majority element is the element that appears more than ⌊n / 2⌋ times."
+            - Constraints: "n == nums.length, 1 <= n <= 5 * 10^4, -10^9 <= nums[i] <= 10^9."
+            - Examples: 
+              - Example: 
+                - Input: "nums = [2,2,1,1,1,2,2]"
+                - Output: "2"
+            - Methods: 
+              - FindMajorityElement: 
+                - Approach: "Use Boyer-Moore Voting Algorithm. Iterate through the array and keep a counter. If the next element is same, increment the counter, else decrement. If counter reaches 0, update the candidate."
+        */
+
+        public int FindMajorityElement(int[] nums)
+        {
+            int count = 0;
+            int candidate = 0;
+
+            foreach (int num in nums)
+            {
+                if (count == 0)
+                {
+                    candidate = num;
+                }
+                count += (num == candidate) ? 1 : -1;
+            }
+
+            return candidate;
+        }
+
+        /*
+                - TimeComplexity: "O(n), as the operation iterates through the array only once."
+                - SpaceComplexity: "O(1), we're not using additional space that scales with input size."
+        */
+
+        #endregion
+
+
     }
 }
