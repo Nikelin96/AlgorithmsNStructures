@@ -689,18 +689,49 @@
                 - Approach: "Use Boyer-Moore Voting Algorithm. Iterate through the array and keep a counter. If the next element is same, increment the counter, else decrement. If counter reaches 0, update the candidate."
         */
 
+        //public int FindMajorityElement(int[] nums)
+        //{
+        //    int count = 0;
+        //    int candidate = 0;
+
+        //    foreach (int num in nums)
+        //    {
+        //        if (count == 0)
+        //        {
+        //            candidate = num;
+        //        }
+        //        count += (num == candidate) ? 1 : -1;
+        //    }
+
+        //    return candidate;
+        //}
+
         public int FindMajorityElement(int[] nums)
         {
-            int count = 0;
-            int candidate = 0;
+            if (nums.Length == 1)
+            {
+                return nums[0];
+            }
 
-            foreach (int num in nums)
+            int count = 1;
+            int candidate = nums[0];
+
+            for (var i = 1; i < nums.Length; i++)
             {
                 if (count == 0)
                 {
-                    candidate = num;
+                    candidate = nums[i];
+                    count = 1;
                 }
-                count += (num == candidate) ? 1 : -1;
+                else if (nums[i] == candidate)
+                {
+                    candidate++;
+                }
+                else
+                {
+                    candidate--;
+                }
+                //count += (num == candidate) ? 1 : -1;
             }
 
             return candidate;
